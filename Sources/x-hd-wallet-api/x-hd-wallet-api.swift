@@ -121,7 +121,7 @@ public class XHDWalletAPI {
         }
     }
 
-    func fromSeed(_ seed: Data) -> Data {
+    public func fromSeed(_ seed: Data) -> Data {
         // k = H512(seed)
         var k = CryptoUtils.sha512(data: seed)
         var kL = k.subdata(in: 0 ..< ED25519_SCALAR_SIZE)

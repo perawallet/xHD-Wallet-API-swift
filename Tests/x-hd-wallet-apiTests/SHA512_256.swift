@@ -10,10 +10,6 @@
 
 import Foundation
 
-// swiftlint:disable variable_name
-// swiftlint:disable line_length
-// swiftlint:disable comma
-
 public struct SHA512_256 {
     public func hash(_ message: [UInt8]) -> [UInt8] {
         SHA2.hash64Bit(message: message)
@@ -45,10 +41,6 @@ let k: [UInt64] = [0x428A_2F98_D728_AE22, 0x7137_4491_23EF_65CD, 0xB5C0_FBCF_EC4
 func truncateResult<T>(h: [T]) -> ArraySlice<T> {
     h[0 ..< 4]
 }
-
-// swiftlint:enable variable_name
-// swiftlint:enable line_length
-// swiftlint:enable comma
 
 enum SHA2 {
     private static func preprocessMessage(message: [UInt8],
@@ -166,8 +158,6 @@ enum SHA2 {
 
         return result
     }
-
-    // swiftlint:enable function_body_length
 
     static func hash64Bit(message: String) -> String {
         Representations.toHexadecimalString(

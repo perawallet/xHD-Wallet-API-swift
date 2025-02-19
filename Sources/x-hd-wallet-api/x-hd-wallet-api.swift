@@ -356,7 +356,6 @@ public class XHDWalletAPI {
         // Prefixes taken from go-algorand node software code
         // https://github.com/algorand/go-algorand/blob/master/protocol/hash.go
 
-        // swiftlint:disable:next line_length
         let prefixes = ["appID", "arc", "aB", "aD", "aO", "aP", "aS", "AS", "BH", "B256", "BR", "CR", "GE", "KP", "MA", "MB", "MX", "NIC", "NIR", "NIV", "NPR", "OT1", "OT2", "PF", "PL", "Program", "ProgData", "PS", "PK", "SD", "SpecialAddr", "STIB", "spc", "spm", "spp", "sps", "spv", "TE", "TG", "TL", "TX", "VO"]
         let prefixBytes = prefixes.map { $0.data(using: .ascii)! }
         return prefixBytes.contains { data.starts(with: $0) }

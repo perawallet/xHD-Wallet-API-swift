@@ -112,16 +112,6 @@ let derivedKey = try c.deriveChildNodePublic(extendedKey: walletRoot, index: UIn
 
 and derive the descendant child pk/address at the index specified.
 
-## Formatting and Linting
-
-This repo comes with both [Swiftformat](https://github.com/nicklockwood/SwiftFormat) and [SwiftLint](https://github.com/realm/SwiftLint).
-
-SwiftLint comes with its own `SwiftLintBuildToolPlugin` and is such run as part of any normal `swift build` call.
-
-SwiftFormat is run as part of the pre-commit hook, and can otherwise be called from the command line with `swift package plugin --allow-writing-to-package-directory swiftformat .`. As this also triggers a `swift build`, SwiftLint gets run as well.
-
-The two do overlap but, generally speaking, SwiftFormat formats the code while SwiftLint warns or errors out on code-smells.
-
 ## Requirements
 
 The Package.swift file specifies the minimum version of Swift required to build this library, as well as the minimum versions of the platforms. `.swift-version` also specifies the version for linting.

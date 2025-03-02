@@ -57,7 +57,7 @@ class DataValidationException: Error {
 public struct Schema {
     var jsonSchema: [String: Any]
 
-    init(filePath: String) throws {
+    public init(filePath: String) throws {
         let url = URL(fileURLWithPath: filePath)
         let data = try Data(contentsOf: url)
         let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])

@@ -73,6 +73,14 @@ public struct Schema {
 public struct SignMetadata {
     var encoding: Encoding
     var schema: Schema
+    
+    public init(
+        encoding: Encoding,
+        schema: Schema
+    ) {
+        self.encoding = encoding
+        self.schema = schema
+    }
 }
 
 extension Data {
